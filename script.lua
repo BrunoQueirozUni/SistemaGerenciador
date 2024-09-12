@@ -10,7 +10,7 @@ function AdicionarAluno(nome, idade)
    print("Aluno " .. nome .. " adicionado com sucesso!")
 end
 
-function AdicionarProfessor(nome, idade)
+function AdicionarProfessor(nome, materia)
    table.insert(professores, {nome = nome, materia = materia})
    print("Professor " .. nome .. " adicionado com sucesso!")
 end
@@ -30,7 +30,7 @@ function ListarAlunos()
 end
 
 function ListarProfessores()
-   if #professores == o then
+   if #professores == 0 then
       print("Nenhum professor cadastrado!")
    else
       print("╔══════════════════════════════════════════════════╗")
@@ -89,7 +89,6 @@ function Gerenciar()
                io.flush()
                os.execute("timeout /t 1 >nul")
             end
-
          break
       else
          print("Opção inválida!")
